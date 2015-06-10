@@ -37,7 +37,7 @@ angular
     templateUrl: 'views/contact-list.html',
     controllerAs: 'contactListCtrl',
     controller: function($scope, $http){
-      $http.get('scripts/contact-list-users.json').success(function(data){
+      $http.get('https://api.myjson.com/bins/pv44').success(function(data){
         $scope.users = data.user;
       });
     }
