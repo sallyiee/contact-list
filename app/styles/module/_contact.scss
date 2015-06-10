@@ -1,0 +1,137 @@
+$contact-list__primary-bg-color: #343742;
+$contact-list__primary-font-color: #2d3139;
+$contact-list__status-online: #77be53;
+$contact-list__status-offline: #c2c2c2;
+$contact-list__border-color: #e1e0dc;
+$contact-list__avatar-size: 50px;
+
+
+.contact-list{
+	position: fixed;
+	width: 300px;
+	max-height: 300px;
+	overflow-x: scroll;
+	bottom: 0;
+	right: 20px;
+	box-sizing: border-box;
+	background-color: #FFF;
+}
+
+.user__list{
+	list-style: none;
+	padding: 0;
+	margin-bottom: 0;
+	position: relative;
+	li{
+		padding:  11px;
+		box-sizing: border-box;
+		border-left: 1px solid $contact-list__border-color;
+		border-right: 1px solid $contact-list__border-color;
+		border-top: 1px solid $contact-list__border-color;
+		&:last-of-type, &:first-of-type{
+			padding-bottom: 11px;
+		}
+		&:nth-of-type(even){
+			background-color: #f8f7f5;
+		}
+		&:nth-of-type(odd){
+			background-color: #f3f2f0;
+		}
+		&.user__list--header{
+			background-color: $contact-list__primary-bg-color;
+			color: #FFF;
+		}
+
+	}
+}
+
+.user__list-status{
+	line-height: $contact-list__avatar-size;
+	.indicator{
+		display: inline-block;
+		width: 12px;
+		height: 12px;
+		border-radius: $contact-list__avatar-size;
+		background-color: $contact-list__status-offline;
+	}
+	&.online{
+		.indicator{
+			background-color: $contact-list__status-online;
+		}
+	}
+}
+
+.user__list-username{
+	box-sizing: border-box;
+	white-space: nowrap;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+  	padding-left: 11px;
+  	width: 70%;
+  	font-weight: bold;
+  	font-size: 1.1em;
+}
+
+.user__list-img{
+	width: $contact-list__avatar-size;
+	height: $contact-list__avatar-size;
+	img{
+		width: 100%;
+		vertical-align: middle;
+	}
+}
+
+.user__list-img, .user__list-username{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.placeholder-img{
+	width: $contact-list__avatar-size;
+	height: $contact-list__avatar-size;
+	display: inline-block;
+	text-align: center;
+	font-size: 2em;
+	line-height: $contact-list__avatar-size;
+	background-color: $contact-list__primary-bg-color;
+	color: #FFF;
+}
+
+#user__list-search{
+	padding: 0;
+	// position: fixed;
+ //  	width: 100%;
+ //  	bottom: 0;
+	&:before{
+		font-family:'FontAwesome';
+		content: "\f002";
+		display: inline-block;
+		position: absolute;
+	  	line-height: 37px;
+	  	font-size: 18px;
+	  	text-align: center;
+	  	width: 30px;
+	  	color: #aaaaa9;
+	}
+	input{
+		width: 100%;
+		border: none;
+		padding: 8px 8px 8px 30px;
+		box-sizing: border-box;
+		background-color: #f5f4f2;
+
+		&:active, &:focus{
+			outline: none;
+		}
+	}
+	&:hover{
+		input{
+			background-color: #FFF;
+		}
+		&:before, ::-webkit-input-placeholder {
+			color: #4b4b49;
+		}
+	}
+
+
+}

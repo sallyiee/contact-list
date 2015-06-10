@@ -1,0 +1,24 @@
+    <div class="contact-list" >
+      <ul class="user__list">
+        <li class="user__list--header" ng-click="toggled()">My Contacts</li>
+        <div ng-repeat="user in users | filter: search" class="user__list-list">
+          <li>
+            <div class="user__list-img">
+              <span ng-if="user.profileimage != undefined">
+                <img src="{{user.profileimage}}" alt="">
+              </span>
+              <span ng-if="user.profileimage == undefined" >
+                <div class="placeholder-img">{{user.username.charAt(0).toUpperCase()}}</div>
+              </span>
+            </div>
+            <div class="user__list-username">{{user.username}}</div>
+            <div class=" user__list-status pull-right " ng-class="{'online':user.status == 'Online'}"><div class="indicator"></div></div> 
+          </li>
+        </div>
+        <li id="user__list-search">
+          <input type="text" placeholder="Search" ng-model="search">
+        </li>
+      </ul>
+
+
+    </div>
