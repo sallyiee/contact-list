@@ -438,7 +438,7 @@ module.exports = function (grunt) {
     },
     heroku: {
       options: {
-        remote: 'git@heroku.com:mysterious-oasis-1515.git',
+        remote: 'git@heroku.com:morning-ravine-9092.git',
         branch: 'master',
         tag: pkg.version
       }
