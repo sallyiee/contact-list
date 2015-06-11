@@ -8,9 +8,6 @@ $contact-list__avatar-size: 50px;
 
 .contact-list{
 	position: fixed;
-	width: 300px;
-	max-height: 300px;
-	overflow-y: scroll;
 	bottom: 0;
 	right: 20px;
 	box-sizing: border-box;
@@ -20,6 +17,9 @@ $contact-list__avatar-size: 50px;
 .user__list{
 	list-style: none;
 	padding: 0;
+		width: 300px;
+	max-height: 300px;
+	overflow-y: scroll;
 	margin-bottom: 0;
 	position: relative;
 	li{
@@ -37,12 +37,16 @@ $contact-list__avatar-size: 50px;
 		&:nth-of-type(odd){
 			background-color: #f3f2f0;
 		}
-		&.user__list--header{
-			background-color: $contact-list__primary-bg-color;
-			color: #FFF;
-		}
 
 	}
+}
+
+.user__list--header{
+	background-color: $contact-list__primary-bg-color;
+	color: #FFF;
+	font-size: 1em;
+	margin: 0;
+	padding: 11px;
 }
 
 .user__list-status{
@@ -99,9 +103,7 @@ $contact-list__avatar-size: 50px;
 
 #user__list-search{
 	padding: 0;
-	// position: fixed;
- //  	width: 100%;
- //  	bottom: 0;
+
 	&:before{
 		font-family:'FontAwesome';
 		content: "\f002";

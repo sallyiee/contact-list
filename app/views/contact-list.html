@@ -1,6 +1,6 @@
     <div class="contact-list" >
+    <h1 class="user__list--header" ng-click="toggled()">My Contacts</h1>
       <ul class="user__list">
-        <li class="user__list--header" ng-click="toggled()">My Contacts</li>
         <div ng-repeat="user in users | filter: search" class="user__list-list">
           <li>
             <div class="user__list-img">
